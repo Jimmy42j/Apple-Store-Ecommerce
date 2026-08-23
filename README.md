@@ -219,9 +219,9 @@ It is **not affiliated with, endorsed by, or sponsored by Apple Inc.** Apple, th
 
 ## Author
 
-**Ye Win Htet**
+**Kyaw Moe Htut**
 
-GitHub: `https://github.com/<your-username>`
+GitHub: `https://github.com/Jimmy42j`
 
 ---
 
