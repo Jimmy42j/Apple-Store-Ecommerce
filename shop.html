@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SH Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .logo .tag {
+      font-size: 14px;
+      font-weight: normal;
+      color: gray;
+      margin-left: 10px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-size: 15px;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icons span {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .shop-section {
+      padding: 60px 40px;
+    }
+    .category-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category button {
+  margin-top: 15px;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.category button:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid black;
+}
+
+    .category-title {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    footer {
+  background: #f2f2f2;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #333;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  padding-bottom: 20px;
+}
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #000;
+}
+footer p {
+  margin: 5px 0;
+}
+footer p a {
+  color: #333;
+  text-decoration: none;
+}
+footer p a:hover {
+  text-decoration: underline;
+}
+footer .copyright {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  color: #888;
+}
+
+  </style>
+  <script>
+    function toggleSearchBar() {
+      const bar = document.getElementById('searchBar');
+      bar.style.display = (bar.style.display === 'none') ? 'inline-block' : 'none';
+      if (bar.style.display === 'inline-block') bar.focus();
+    }
+    function addToCart(productId) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(productId);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert('Item added to cart!');
+    }
+    function goToLogin() {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      SH <span class="tag">| Apple Authorized Reseller</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="categoryforaccessories.php">Accessories</a>
+      <a href="aboutus.html">About</a>
+    </div>
+    <div class="icons">
+      <span onclick="toggleSearchBar()"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span onclick="addToCart('product-001')"><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></span>
+      <span onclick="goToLogin()"><a href="login.php"><i class="fa-solid fa-user-astronaut"></i></a></span>
+      <input type="text" id="searchBar" placeholder="Search..." style="display:none; margin-left:10px; padding: 5px 10px;" />
+    </div>
+  </div>
+
+  <div class="shop-section">
+    <div class="category-row">
+      <div class="category">
+        <img src="Product/IphoneP.webp" alt="iPhone">
+        <a href="category.php?category_id=1"><button>iPhone</button></a>
+      </div>
+      <div class="category">
+        <img src="Product/IpadP.webp" alt="iPad">
+        <a href="category.php?category_id=2"><button>iPad</button></a>
+      </div>
+    </div>
+    <div class="category-row">
+      <div class="category">
+        <img src="Product/MaccP.webp">
+        <a href="category.php?category_id=3"><button>Mac</button></a>
+      </div>
+      <div class="category">
+        <img src="Product/WatchP.webp">
+       <a href="category.php?category_id=4"><button>iWatch</button></a>
+      </div>
+      <div class="category">
+        <img src="Product/airpodp.webp">
+        <a href="category.php?category_id=5"><button>AirPods</button></a>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/325f12f506.js" crossorigin="anonymous"></script>
+</body>
+<footer>
+  <div class="footer-grid">
+     <div>
+        <h4>Shop</h4>
+        <p>iPhone</p>
+        <p>iPad</p>
+        <p>Mac</p>
+        <p>Apple Watch</p>
+        <p>AirPods</p>
+        <p>Accessories</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p>About</p>
+        <p>Contact Us</p>
+        <p>Collection</p>
+        <p>Careers</p>
+        <p>Trade In</p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p>Privacy & Policy</p>
+        <p>Delivery Policy</p>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <p>Phone: +959 784 344 613</p>
+        <p>Ig   : kyaw_moe_htut</p>
+        <p>Email: moehtut423@gmail.com</p>
+        <br>
+        <strong>Store Timing</strong>
+        <p>Open Daily: 9:00 AM to 6:30PM</p>
+      </div>
+    </div>
+    <p class="copyright">
+      © 2025 SH Group Company Limited. All Rights Reserved.
+    </p>
+</footer>
+</html>

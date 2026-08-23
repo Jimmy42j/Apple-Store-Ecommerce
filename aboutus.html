@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - SH Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .nav-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #111;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .heading {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SH <span style="font-size: 14px; color: gray; font-weight: normal;">| Apple Authorized Reseller</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="categoryforaccessories.php">Accessories</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="heading">More from SH Store</h1>
+
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://www.apple.com/newsroom/images/product/apple-tv-plus/standard/Apple-TV-Plus-Friday-Night-Baseball-MLB-big.jpg.large.jpg" alt="News">
+        <h3>Apple and Major League Baseball</h3>
+        <p>Announced August “Friday Night Baseball” live streaming partnership. <br> <strong>July 1, 2025</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.apple.com/newsroom/images/product/music/standard/Apple-Music-10-year-anniversary-hero_big.jpg.large.jpg" alt="Music">
+        <h3>Apple Music Celebrates 10 Years</h3>
+        <p>Launch of a new global hub for artists worldwide. <br> <strong>June 30, 2025</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.apple.com/newsroom/images/product/sports/standard/Apple-Sports-app-tennis_big.jpg.large.jpg" alt="Sports">
+        <h3>Apple Sports Update</h3>
+        <p>Apple Sports serves up tennis just in time for Wimbledon. <br> <strong>June 25, 2025</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.apple.com/newsroom/images/product/software-services/standard/Apple-Parental-Controls_big.jpg.large.jpg" alt="Parental">
+        <h3>Tools for Parents</h3>
+        <p>New tools help parents protect kids and teens online. <br> <strong>June 11, 2025</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.apple.com/newsroom/images/product/services/standard/Apple-services-hero_big.jpg.large.jpg" alt="Services">
+        <h3>Smarter Apple Services</h3>
+        <p>Delivering powerful features and intelligent updates to users. <br> <strong>June 1, 2025</strong></p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.apple.com/newsroom/images/product/games/standard/Apple-Games-App-hero_big.jpg.large.jpg" alt="Games">
+        <h3>New Apple Games App</h3>
+        <p>A personalized home for games — curated and optimized. <br> <strong>May 22, 2025</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 SH Group Company Limited. All Rights Reserved.
+  </footer>
+</body>
+</html>
